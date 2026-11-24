@@ -2,126 +2,57 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#ffffff"><meta name="robots" content="noindex,nofollow">
-<title>AQX Food — Classic Restaurant Template</title>
+<meta name="theme-color" content="#123b32">
+<title>مطعم مذاق | المنيو والطلبات</title>
+<link rel="preconnect" href="https://images.unsplash.com">
 <style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh}button,a{font:inherit}.topbar{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,calc((100% - 1180px)/2));position:sticky;top:0;z-index:5}.brand{font-weight:900;letter-spacing:.4px}.aqx-brand{font-size:12px;color:var(--muted)}.cart-open{border:0;background:var(--ink);color:var(--paper);padding:11px 16px;border-radius:999px;cursor:pointer}.cart-open b{background:var(--accent);color:#fff;padding:2px 7px;border-radius:20px;margin-inline-start:5px}
-.hero{position:relative;max-width:1180px;margin:0 auto 24px;background-size:cover;background-position:center;display:flex;align-items:center;padding:38px 6%;overflow:hidden;color:#fff}.hero:after{content:"";position:absolute;inset:0}.hero-content{position:relative;z-index:1;max-width:640px}.identity{display:flex;align-items:center;gap:16px;margin-bottom:18px}.logo{width:64px;height:64px;display:grid;place-items:center;font-size:28px;font-weight:900;overflow:hidden;flex-shrink:0}.logo img{width:100%;height:100%;object-fit:cover}.hero h1{font-size:clamp(30px,5vw,54px);margin:0 0 10px}.hero p{line-height:1.8;color:#f2eee7;margin:6px 0}.meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;font-size:13px;color:#f5eee3}.content{max-width:1180px;margin:auto;padding:0 20px 80px}.aqx-ad{margin:18px auto 28px;padding:14px 18px;border:1px dashed var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--surface));border-radius:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px}.aqx-ad strong{color:var(--ink)}.category-nav{display:flex;gap:9px;overflow:auto;padding:10px 0 22px;position:sticky;top:68px;background:var(--paper);z-index:3}.category-nav a{white-space:nowrap;padding:10px 16px;text-decoration:none;color:var(--ink);font-size:13px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;padding:16px 0;margin:10px 0 20px}.eyebrow{font-size:11px;color:var(--accent);font-weight:800;letter-spacing:1px}.section-heading h2{margin:5px 0;font-size:28px}.section-heading p{color:var(--muted);margin:0;font-size:13px}.count{font-size:12px;color:var(--muted);white-space:nowrap}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.product{display:flex;gap:14px;padding:12px;min-width:0}.product-photo{width:132px;min-width:132px;min-height:132px;display:grid;place-items:center;color:var(--accent);font-size:42px;overflow:hidden}.product-photo img{width:100%;height:100%;min-height:132px;object-fit:cover}.product-info{flex:1;min-width:0;display:flex;flex-direction:column}.product-info h3{font-size:18px;margin:4px 0 7px}.product-info p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 14px}.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto}.product-bottom strong{font-size:15px;white-space:nowrap}.add{border:0;color:white;padding:9px 12px;cursor:pointer;font-size:12px;white-space:nowrap}.add span{font-size:16px;margin-inline-start:4px}.cart-panel{position:fixed;z-index:10;inset:0  auto 0 0;width:min(390px,92vw);background:var(--surface);box-shadow:0 0 0 100vmax #0007;transform:translateX(-110%);transition:transform .25s;padding:22px;display:flex;flex-direction:column}.cart-panel.open{transform:translateX(0)}.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:14px}.cart-head button{border:0;background:none;font-size:24px;cursor:pointer;color:var(--ink)}.cart-items{padding:12px 0;overflow:auto}.cart-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.cart-empty{color:var(--muted);text-align:center;padding:32px 0}.cart-footer{margin-top:auto;border-top:1px solid var(--line);padding-top:16px}.cart-total{display:flex;justify-content:space-between;font-weight:900;margin-bottom:12px}.checkout-note{font-size:11px;color:var(--muted);line-height:1.7}.empty{background:var(--surface);border:1px dashed var(--line);border-radius:18px;text-align:center;padding:50px 20px;color:var(--muted)}#status{max-width:800px;margin:50px auto;text-align:center;padding:20px;color:var(--muted)}footer{padding:26px 20px;text-align:center;color:var(--muted);font-size:11px}.white-label .aqx-brand,.white-label .aqx-ad{display:none!important}
-@media(max-width:700px){.topbar{height:60px;padding:0 16px}.hero{margin:0 0 18px;min-height:290px;padding:28px 22px}.logo{width:54px;height:54px}.content{padding:0 14px 70px}.category-nav{top:60px}.products{grid-template-columns:1fr;gap:12px}.product{gap:12px}.product-photo{width:112px;min-width:112px;min-height:118px}.product-photo img{min-height:118px}.section-heading h2{font-size:24px}.aqx-ad{align-items:flex-start;flex-direction:column}.product-info h3{font-size:16px}}
-@media(min-width:701px) and (max-width:980px){.products{grid-template-columns:1fr}}
-
-
-:root{--ink:#29251f;--muted:#82796d;--accent:#9b633d;--accent2:#d6b58b;--paper:#fbf7f0;--surface:#fffdf9;--line:#e9dfd2;--hero:#45362b}
-body{background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif}
-.topbar{background:#fffdf9;border-bottom:1px solid var(--line)}
-.hero{background-color:#45362b;border-radius:0 0 28px 28px;min-height:320px}
-.hero:after{background:linear-gradient(90deg,rgba(29,22,17,.78),rgba(29,22,17,.12))}
-.logo{border-radius:50%;background:#f0e3d1;color:#6d4329;border:3px solid #fff}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
-.product{background:var(--surface);border:1px solid var(--line);border-radius:18px}
-.product-photo{background:linear-gradient(135deg,#eadcc9,#f9f1e6);border-radius:14px}
-.add{background:var(--accent);border-radius:8px}
-.category-nav a{border:1px solid var(--line);border-radius:5px}
-.category-nav a.active{background:var(--ink);color:white}
-.section-heading{border-bottom:1px solid var(--line)}
+:root{--green:#123b32;--green2:#1c5748;--gold:#d7a85b;--cream:#fbf8f1;--ink:#202923;--muted:#777e76;--line:#e9e4d9;--white:#fff;--shadow:0 14px 38px #18382b12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Tahoma,Arial,sans-serif}button{font:inherit;cursor:pointer}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+header{height:76px;background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #eee9df}.head{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;color:var(--green);font-size:21px}.brand-mark{width:42px;height:42px;border-radius:14px;background:var(--green);color:var(--gold);display:grid;place-items:center;font-size:23px}.brand small{display:block;color:#89918a;font-size:10px;font-weight:500;margin-top:3px}.navlinks{display:flex;gap:27px}.navlinks a{color:#59635c;text-decoration:none;font-size:13px}.cart-btn{border:0;background:var(--green);color:white;border-radius:999px;padding:11px 17px;font-size:13px}.cart-btn b{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-right:7px;border-radius:50%;background:var(--gold);color:var(--green)}
+.hero{padding:42px 0 30px}.hero-box{min-height:370px;overflow:hidden;position:relative;border-radius:28px;background:#173a30 url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center}.hero-box:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,31,25,.94) 0%,rgba(10,31,25,.76) 44%,rgba(10,31,25,.12) 100%)}.hero-copy{position:relative;color:#fff;padding:48px 7%;max-width:650px}.tag{display:inline-flex;align-items:center;gap:8px;color:#f2d39b;font-size:12px;font-weight:700;background:#ffffff17;border:1px solid #ffffff2b;padding:8px 13px;border-radius:999px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.2;margin:20px 0 12px}.hero p{color:#e0e7e0;line-height:1.9;font-size:15px;max-width:490px;margin:0}.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;color:#f3e9d6;font-size:12px}.hero-meta span{display:flex;align-items:center;gap:7px}.hero-cta{display:inline-flex;margin-top:25px;padding:13px 22px;border-radius:999px;background:var(--gold);color:#173a30;text-decoration:none;font-weight:800;font-size:13px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 34px}.feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px 19px;display:flex;align-items:center;gap:13px}.feature i{font-style:normal;width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:#f5efe2;font-size:19px}.feature strong{display:block;font-size:13px}.feature small{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.menu-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:42px 0 18px}.eyebrow{color:#b17c32;font-size:11px;font-weight:900;letter-spacing:.7px}.menu-head h2{font-size:30px;color:var(--green);margin:7px 0}.menu-head p{margin:0;color:var(--muted);font-size:13px}.menu-count{color:var(--muted);font-size:12px;white-space:nowrap}
+.categories{display:flex;gap:9px;overflow:auto;padding:5px 0 22px;scrollbar-width:none}.categories::-webkit-scrollbar{display:none}.categories button{white-space:nowrap;border:1px solid var(--line);background:#fff;color:#566158;border-radius:999px;padding:10px 18px;font-size:12px}.categories button.active{background:var(--green);color:#fff;border-color:var(--green)}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product{background:#fff;border:1px solid #eee9df;border-radius:20px;overflow:hidden;box-shadow:0 5px 20px #193a2c08;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.photo{height:190px;position:relative;background:#eee8dc;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.product:hover .photo img{transform:scale(1.04)}.popular{position:absolute;top:13px;right:13px;background:#fff;color:var(--green);border-radius:999px;padding:6px 10px;font-size:10px;font-weight:800}.pbody{padding:17px}.pbody h3{font-size:17px;margin:0 0 8px;color:#25372e}.pbody p{font-size:12px;color:var(--muted);line-height:1.75;min-height:40px;margin:0 0 17px}.pfoot{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:900;color:var(--green);font-size:16px}.price small{font-size:10px;color:var(--muted);font-weight:500}.add{border:0;background:#edf3ee;color:var(--green);border-radius:11px;padding:10px 13px;font-size:12px;font-weight:800}.add:hover{background:var(--green);color:white}
+.about{margin:58px 0 40px;background:#f0eee5;border-radius:24px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}.about h3{color:var(--green);font-size:21px;margin:0 0 8px}.about p{color:var(--muted);font-size:12px;line-height:1.9;margin:0;max-width:700px}
+footer{background:var(--green);color:#e9eee9;padding:28px 0;margin-top:55px}.foot{display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:12px}.foot small{color:#b6c7bc}
+.drawer{position:fixed;z-index:50;inset:0;visibility:hidden}.drawer.show{visibility:visible}.shade{position:absolute;inset:0;background:#091b15a6;opacity:0;transition:.2s}.drawer.show .shade{opacity:1}.panel{position:absolute;top:0;bottom:0;left:0;width:min(420px,94vw);background:#fff;padding:24px;display:flex;flex-direction:column;transform:translateX(-105%);transition:.25s}.drawer.show .panel{transform:translateX(0)}.panel-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:17px}.panel-head h3{margin:0;color:var(--green)}.close{border:0;background:#f2f3ef;border-radius:50%;width:36px;height:36px;font-size:21px}.cart-items{overflow:auto;flex:1;padding:12px 0}.cart-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13px}.qty{display:flex;align-items:center;gap:8px}.qty button{width:25px;height:25px;border:0;border-radius:8px;background:#edf3ee;color:var(--green)}.empty{text-align:center;color:var(--muted);padding:45px 10px;font-size:13px}.cart-summary{border-top:1px solid var(--line);padding-top:18px}.total{display:flex;justify-content:space-between;font-weight:900;color:var(--green);margin-bottom:12px}.note{font-size:10px;color:var(--muted);line-height:1.7}
+#status{display:none;text-align:center;padding:55px 15px;color:var(--muted)}.preview-note{text-align:center;color:#8a8e84;font-size:10px;margin:12px 0}
+@media(max-width:800px){.navlinks{display:none}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.photo{height:165px}.hero-box{min-height:340px}.features{gap:9px}.feature{padding:13px 10px}.feature small{font-size:10px}}
+@media(max-width:560px){.wrap{width:calc(100% - 28px)}header{height:66px}.brand{font-size:18px}.brand-mark{width:38px;height:38px}.hero{padding:18px 0 20px}.hero-box{min-height:360px;border-radius:20px;background-position:58% center}.hero-box:before{background:linear-gradient(0deg,rgba(10,31,25,.94),rgba(10,31,25,.45))}.hero-copy{padding:28px 22px}.hero h1{font-size:37px}.hero p{font-size:13px}.hero-meta{gap:12px}.features{grid-template-columns:1fr;gap:8px;margin-bottom:22px}.feature{padding:10px 13px}.feature i{width:35px;height:35px}.menu-head h2{font-size:25px}.products{grid-template-columns:1fr 1fr;gap:10px}.photo{height:130px}.pbody{padding:12px}.pbody h3{font-size:14px}.pbody p{font-size:10px;min-height:48px;margin-bottom:12px}.price{font-size:13px}.add{padding:8px 9px;font-size:10px}.about{padding:22px;margin:38px 0 25px}.foot{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="brand">مطعمك <span class="aqx-brand">بواسطة AQX Food</span></div><button class="cart-open" id="cart-open" type="button">السلة <b id="cart-count">0</b></button></header>
-<section class="hero" id="hero" hidden><div class="hero-content"><div class="identity"><div class="logo" id="store-logo">م</div><div><span class="eyebrow">أهلاً وسهلاً</span><h1 id="store-name">المطعم</h1></div></div><p id="store-description"></p><div class="meta"><span id="store-city"></span><span id="store-address"></span><span id="minimum"></span><span id="prep"></span></div></div></section>
-<div id="status" role="status" aria-live="polite">جاري تجهيز صفحة المطعم...</div>
-<main class="content" id="content" hidden>
-<div class="aqx-ad"><span><strong>مساحة إعلانية من AQX</strong> — عروض وخدمات مفيدة لزوار المطعم</span><span>إعلان</span></div>
-<nav class="category-nav" id="categories" aria-label="أقسام المنيو"></nav>
-<div id="menu"></div>
+<header><div class="wrap head"><div class="brand"><span class="brand-mark">م</span><span id="brand-name">مطعم مذاق<small>طعم يستاهل التجربة</small></span></div><nav class="navlinks"><a href="#home">الرئيسية</a><a href="#menu-area">المنيو</a><a href="#about">عن المطعم</a></nav><button class="cart-btn" id="open-cart">سلة الطلبات <b id="cart-count">0</b></button></div></header>
+<section class="hero" id="home"><div class="wrap"><div class="hero-box"><div class="hero-copy"><span class="tag">✦ مذاق أصيل • جودة كل يوم</span><h1 id="hero-name">أهلاً بيك في<br>مطعم مذاق</h1><p id="hero-desc">أطباق محضّرة بحب، ومكونات طازجة، وتجربة طعام تخليك ترجع تاني.</p><div class="hero-meta"><span>◷ يومياً 12 ظ – 12 م</span><span>★ 4.8 تقييم العملاء</span><span>⌖ الإسكندرية</span></div><a class="hero-cta" href="#menu-area">اكتشف المنيو ←</a></div></div></div></section>
+<main class="wrap">
+<div class="features"><div class="feature"><i>✦</i><span><strong>مكونات طازجة</strong><small>اختيار يومي بعناية</small></span></div><div class="feature"><i>♨</i><span><strong>تحضير وقت الطلب</strong><small>طعم طازج في كل مرة</small></span></div><div class="feature"><i>♡</i><span><strong>جودة نهتم بيها</strong><small>تجربة ترضيك من أول لقمة</small></span></div></div>
+<section id="menu-area"><div class="menu-head"><div><span class="eyebrow">اختار اللي على مزاجك</span><h2>منيو المطعم</h2><p>أشهى اختياراتنا محضّرة مخصوص ليك</p></div><span class="menu-count" id="item-count">6 أصناف</span></div><div class="categories" id="categories"></div><div class="products" id="products"></div></section>
+<section class="about" id="about"><div><h3>حكايتنا تبدأ من أول لقمة</h3><p id="about-text">في مطعم مذاق بنؤمن إن الأكل الحلو مش مجرد وجبة؛ دي لحظة تستمتع بيها. بنختار مكوناتنا بعناية ونحضّر كل طبق باهتمام علشان نقدم لك تجربة تستحقها.</p></div><span style="font-size:42px">🍽️</span></section>
+<p class="preview-note" id="preview-note">نسخة عرض تجريبية لقالب AQX Food — يمكن تخصيص الاسم والصور والألوان والمنيو لكل مطعم.</p>
 </main>
-<aside class="cart-panel" id="cart-panel" aria-label="سلة المشتريات"><div class="cart-head"><strong>سلة طلبك</strong><button id="cart-close" type="button" aria-label="إغلاق">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>الإجمالي المبدئي</span><span id="cart-total">0</span></div><p class="checkout-note">هذه معاينة لقالب واجهة المطعم. سيتم تفعيل إرسال الطلب والدفع عند ربط مسار الطلبات المعتمد.</p></div></aside>
-<footer class="aqx-brand">مدعوم بواسطة AQX Food</footer>
+<footer><div class="wrap foot"><strong id="footer-name">مطعم مذاق</strong><small>واجهة متجر إلكتروني مقدمة من AQX Food</small></div></footer>
+<div class="drawer" id="drawer"><div class="shade" id="shade"></div><aside class="panel"><div class="panel-head"><h3>سلة طلباتك</h3><button class="close" id="close-cart">×</button></div><div class="cart-items" id="cart-items"><div class="empty">السلة لسه فاضية، اختار حاجة بتحبها 😊</div></div><div class="cart-summary"><div class="total"><span>الإجمالي</span><span id="cart-total">0 ج.م</span></div><p class="note">هذه معاينة لتصميم واجهة المتجر. إرسال الطلب والدفع الإلكتروني يحتاجان ربط نظام الطلبات المعتمد.</p></div></aside></div>
 <script>
-const API = "https://vuszqzgldbsscuxdfhdz.supabase.co/functions/v1/aqx-food-api";
-const $ = (s) => document.querySelector(s);
-const money = (n,c) => new Intl.NumberFormat("ar-EG",{style:"currency",currency:c||"EGP",maximumFractionDigits:2}).format(Number(n)||0);
-const safe = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const slugFromLocation = () => {
-  const q = new URLSearchParams(location.search).get("store");
-  if (q) return q.trim();
-  const parts = location.pathname.split("/").filter(Boolean);
-  const r = parts.indexOf("r");
-  if (r >= 0 && parts[r+1]) return decodeURIComponent(parts[r+1]);
-  const host = location.hostname.split(".");
-  if (host.length > 3 && host[1] === "food") return host[0];
-  return "";
-};
-let storeData = null, cart = [];
-function setStatus(message){ $("#status").textContent = message; }
-function productImage(p){
-  const url = p?.metadata?.image_url || p?.metadata?.image || p?.image_url || "";
-  return /^https?:\/\//i.test(url) ? url : "";
-}
-function render(data){
-  storeData = data;
-  const store = data.store || {};
-  const whiteLabel = store.white_label_enabled === true; // entitlement must be supplied by the trusted backend after payment verification.
-  document.title = (store.name || "المطعم") + " | AQX Food";
-  $("#store-name").textContent = store.name || "مطعم جديد";
-  $("#store-description").textContent = store.description || "أهلاً بيك! اختار من المنيو واستمتع بطلبك.";
-  $("#store-city").textContent = [store.city,store.region].filter(Boolean).join(" • ");
-  $("#store-address").textContent = store.address || "";
-  $("#store-phone").textContent = store.phone || "";
-  $("#store-logo").textContent = (store.name || "م").trim().slice(0,1);
-  const cover = /^https?:\/\//i.test(store.cover_path || "") ? store.cover_path : "";
-  if (cover) $("#hero").style.backgroundImage = "linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.12)),url('" + cover.replace(/'/g,"%27") + "')";
-  const logo = /^https?:\/\//i.test(store.logo_path || "") ? store.logo_path : "";
-  if (logo) $("#store-logo").innerHTML = '<img src="' + safe(logo) + '" alt="">';
-  document.body.classList.toggle("white-label",whiteLabel);
-  $(".aqx-brand").hidden = whiteLabel;
-  $(".aqx-ad").hidden = whiteLabel;
-  $("#minimum").textContent = Number(store.minimum_order_amount)>0 ? "الحد الأدنى للطلب: "+money(store.minimum_order_amount,store.currency) : "نستقبل طلباتك الآن";
-  $("#prep").textContent = store.average_preparation_minutes ? "وقت التحضير التقريبي "+store.average_preparation_minutes+" دقيقة" : "";
-  const categories = data.categories || [];
-  $("#categories").innerHTML = categories.map((c,i)=>'<a href="#cat-'+safe(c.id)+'" class="'+(i===0?"active":"")+'">'+safe(c.name)+'</a>').join("");
-  $("#menu").innerHTML = categories.map(c => {
-    const products = c.products || [];
-    return '<section class="category" id="cat-'+safe(c.id)+'"><div class="section-heading"><div><span class="eyebrow">من المنيو</span><h2>'+safe(c.name)+'</h2><p>'+safe(c.description||"")+'</p></div><span class="count">'+products.length+' أصناف</span></div><div class="products">'+products.map(p=>{
-      const img=productImage(p);
-      return '<article class="product"><div class="product-photo">'+(img?'<img loading="lazy" src="'+safe(img)+'" alt="'+safe(p.name)+'">':'<span>✦</span>')+'</div><div class="product-info"><h3>'+safe(p.name)+'</h3><p>'+safe(p.description||"")+'</p><div class="product-bottom"><strong>'+money(p.price, p.currency||store.currency)+'</strong><button type="button" class="add" data-id="'+safe(p.id)+'">أضف للسلة <span>＋</span></button></div></div></article>';
-    }).join("")+'</div></section>';
-  }).join("");
-  if (!categories.length) $("#menu").innerHTML = '<div class="empty"><strong>المنيو قيد التجهيز</strong><p>سيتم عرض الأصناف هنا بمجرد نشرها من المطعم.</p></div>';
-  $("#hero").hidden = false;
-  $("#content").hidden = false;
-  setStatus("");
-  $("#menu").querySelectorAll(".add").forEach(btn=>btn.addEventListener("click",()=>addProduct(btn.dataset.id)));
-  updateCart();
-}
-function addProduct(id){
-  const product=(storeData?.categories||[]).flatMap(c=>c.products||[]).find(p=>String(p.id)===String(id));
-  if(!product)return;
-  const found=cart.find(x=>x.id===id);
-  if(found)found.qty++; else cart.push({id,name:product.name,price:Number(product.price)||0,currency:product.currency||storeData.store?.currency||"EGP",qty:1});
-  updateCart();
-}
-function updateCart(){
-  const count=cart.reduce((n,x)=>n+x.qty,0), total=cart.reduce((n,x)=>n+x.qty*x.price,0);
-  $("#cart-count").textContent=count;
-  $("#cart-total").textContent=money(total,storeData?.store?.currency||"EGP");
-  $("#cart-items").innerHTML=cart.length?cart.map(x=>'<div class="cart-line"><span>'+safe(x.name)+' × '+x.qty+'</span><b>'+money(x.price*x.qty,x.currency)+'</b></div>').join(""):'<p class="cart-empty">السلة لسه فاضية.</p>';
-}
-$("#cart-open").addEventListener("click",()=>$("#cart-panel").classList.toggle("open"));
-$("#cart-close").addEventListener("click",()=>$("#cart-panel").classList.remove("open"));
-$("#cart-items").addEventListener("click",()=>{});
-(async()=>{
-  const slug=slugFromLocation();
-  if(!slug){setStatus("افتح رابط المطعم أو أضف ?store=اسم-المطعم إلى الرابط.");return;}
-  try{
-    setStatus("بنحمّل صفحة المطعم والمنيو...");
-    const response=await fetch(API+"/public/storefront/"+encodeURIComponent(slug),{headers:{Accept:"application/json"}});
-    const result=await response.json();
-    if(!response.ok||!result.ok||!result.storefront)throw new Error(result.error||"storefront_unavailable");
-    render(result.storefront);
-  }catch(error){
-    console.error(error);
-    setStatus("تعذر تحميل صفحة المطعم حاليًا. تأكد من نشر المطعم وإعداد ربط النطاق.");
-  }
-})();</script>
+const API="https://vuszqzgldbsscuxdfhdz.supabase.co/functions/v1/aqx-food-api";
+const $=s=>document.querySelector(s), money=n=>new Intl.NumberFormat("ar-EG",{maximumFractionDigits:0}).format(Number(n)||0)+" ج.م";
+const demo=[
+{id:"d1",name:"مشاوي مشكلة",description:"تشكيلة مشويات طازجة مع الأرز والسلطة.",price:285,image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80",category:"الأطباق الرئيسية",popular:true},
+{id:"d2",name:"برجر لحم كلاسيك",description:"لحم بقري مشوي، جبنة شيدر وصوص المطعم.",price:195,image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80",category:"الأطباق الرئيسية",popular:true},
+{id:"d3",name:"باستا ألفريدو",description:"مكرونة بصوص كريمي وفطر وبارميزان.",price:165,image:"https://images.unsplash.com/photo- pasta",category:"الأطباق الرئيسية"},
+{id:"d4",name:"سلطة سيزر",description:"خس طازج، دجاج مشوي وصوص سيزر.",price:110,image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80",category:"مقبلات"},
+{id:"d5",name:"بطاطس مقرمشة",description:"بطاطس ذهبية بتتبيلة خاصة.",price:65,image:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=80",category:"مقبلات"},
+{id:"d6",name:"تشيز كيك",description:"قطعة تشيز كيك كريمية بطبقة فواكه.",price:95,image:"https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=80",category:"حلويات"}
+];
+let items=demo, cart=[], active="الكل", currency="EGP";
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function renderCategories(){const cats=["الكل",...new Set(items.map(x=>x.category||"أطباقنا"))];$("#categories").innerHTML=cats.map(c=>'<button class="'+(active===c?"active":"")+'" data-cat="'+esc(c)+'">'+esc(c)+'</button>').join("");$("#categories").querySelectorAll("button").forEach(b=>b.onclick=()=>{active=b.dataset.cat;renderCategories();renderProducts()});}
+function renderProducts(){const shown=active==="الكل"?items:items.filter(x=>(x.category||"أطباقنا")===active);$("#products").innerHTML=shown.map(p=>'<article class="product"><div class="photo"><img loading="lazy" src="'+esc(p.image||"")+'" alt="'+esc(p.name)+'">'+(p.popular?'<span class="popular">الأكثر طلباً</span>':"")+'</div><div class="pbody"><h3>'+esc(p.name)+'</h3><p>'+esc(p.description||"طبق شهي من اختيارنا")+'</p><div class="pfoot"><span class="price">'+money(p.price)+'</span><button class="add" data-id="'+esc(p.id)+'">＋ أضف للسلة</button></div></div></article>').join("");$("#item-count").textContent=items.length+" أصناف";$("#products").querySelectorAll(".add").forEach(b=>b.onclick=()=>add(b.dataset.id));}
+function add(id){const p=items.find(x=>String(x.id)===String(id));if(!p)return;const old=cart.find(x=>String(x.id)===String(id));old?old.qty++:cart.push({...p,qty:1});updateCart();$("#drawer").classList.add("show");}
+function updateCart(){const count=cart.reduce((s,x)=>s+x.qty,0),total=cart.reduce((s,x)=>s+x.qty*(Number(x.price)||0),0);$("#cart-count").textContent=count;$("#cart-total").textContent=money(total);$("#cart-items").innerHTML=cart.length?cart.map(x=>'<div class="cart-row"><span>'+esc(x.name)+'<br><small>'+money(x.price)+'</small></span><span class="qty"><button data-id="'+esc(x.id)+'" data-delta="-1">−</button><b>'+x.qty+'</b><button data-id="'+esc(x.id)+'" data-delta="1">+</button></span></div>').join(""):'<div class="empty">السلة لسه فاضية، اختار حاجة بتحبها 😊</div>';$("#cart-items").querySelectorAll("button").forEach(b=>b.onclick=()=>{const x=cart.find(y=>String(y.id)===String(b.dataset.id));if(x){x.qty+=Number(b.dataset.delta);if(x.qty<=0)cart=cart.filter(y=>y!==x);updateCart();}});}
+function showStore(store,categories){$("#brand-name").innerHTML=esc(store.name||"مطعمك")+'<small>أهلاً بيك في مطعمنا</small>';$("#hero-name").textContent="أهلاً بيك في "+(store.name||"مطعمك");$("#hero-desc").textContent=store.description||"أطباق محضّرة بحب ومكونات طازجة.";$("#footer-name").textContent=store.name||"مطعمك";$("#about-text").textContent=store.description||$("#about-text").textContent;const flat=[];(categories||[]).forEach(c=>(c.products||[]).forEach(p=>flat.push({...p,category:c.name,image:p.metadata?.image_url||p.image_url||"",popular:false})));if(flat.length){items=flat;active="الكل";renderCategories();renderProducts();}$("#preview-note").hidden=true;}
+async function init(){renderCategories();renderProducts();const q=new URLSearchParams(location.search),slug=q.get("store");if(!slug)return;try{const r=await fetch(API+"/public/storefront/"+encodeURIComponent(slug),{headers:{Accept:"application/json"}});const j=await r.json();if(!r.ok||!j.ok||!j.storefront)throw Error("storefront");showStore(j.storefront.store||{},j.storefront.categories||[]);}catch(e){$("#preview-note").textContent="تعذر تحميل بيانات المطعم حالياً؛ يتم عرض نموذج تجريبي.";}}
+$("#open-cart").onclick=()=>$("#drawer").classList.add("show");$("#close-cart").onclick=$("#shade").onclick=()=>$("#drawer").classList.remove("show");
+init();
+</script>
 </body></html>
