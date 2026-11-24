@@ -67,7 +67,8 @@ function render(data){
   $("#store-description").textContent = store.description || "أهلاً بيك! اختار من المنيو واستمتع بطلبك.";
   $("#store-city").textContent = [store.city,store.region].filter(Boolean).join(" • ");
   $("#store-address").textContent = store.address || "";
-  $("#store-phone").textContent = store.phone || "";
+  const phoneEl = $("#store-phone");
+  if (phoneEl) phoneEl.textContent = store.phone || "";
   $("#store-logo").textContent = (store.name || "م").trim().slice(0,1);
   const cover = /^https?:\/\//i.test(store.cover_path || "") ? store.cover_path : "";
   if (cover) $("#hero").style.backgroundImage = "linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.12)),url('" + cover.replace(/'/g,"%27") + "')";
