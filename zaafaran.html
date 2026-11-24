@@ -1,30 +1,87 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/favicon.svg"><link rel="manifest" href="manifest.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/base.css">
-<title>روزا | مطعم عصري راقٍ</title><meta name="description" content="روزا: مطبخ عصري، أجواء مشرقة، وتوصيل وحجز بضغطة."><meta name="theme-color" content="#E4572E">
-<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMwRTREM0MiLz48cGF0aCBkPSJNMjAgMTR2MTRjMCA0IDMgNiA2IDZ2MTZNMjYgMTR2MTRNMzIgMTR2MTRjMCA0LTMgNi02IDZNNDIgMTRjLTUgNC02IDEyLTYgMjBoNnYxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThDNzdBIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+Cg==" type="image/svg+xml"><link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMwRTREM0MiLz48cGF0aCBkPSJNMjAgMTR2MTRjMCA0IDMgNiA2IDZ2MTZNMjYgMTR2MTRNMzIgMTR2MTRjMCA0LTMgNi02IDZNNDIgMTRjLTUgNC02IDEyLTYgMjBoNnYxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThDNzdBIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+Cg=="><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><style>*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:var(--bf);background:var(--bg);color:var(--ink);line-height:1.8}
+img{max-width:100%;display:block}button{font:inherit;cursor:pointer;border:0;color:inherit;background:none}a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+.ph{position:relative;overflow:hidden;display:grid;place-items:center;font-size:3rem;background:var(--soft)}
+.ph::before{content:attr(data-e)}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#tabs{display:flex;gap:.6rem;overflow-x:auto;padding:.5rem 0;scrollbar-width:none}#tabs button{white-space:nowrap}
+#ov{position:fixed;inset:0;background:rgba(60,45,30,.3);opacity:0;pointer-events:none;transition:.3s;z-index:40}
+#drawer{position:fixed;top:0;bottom:0;left:0;width:min(420px,100%);background:var(--bg);z-index:50;transform:translateX(-105%);transition:transform .35s;display:flex;flex-direction:column;box-shadow:0 0 60px rgba(0,0,0,.18)}
+.open #drawer{transform:none}.open #ov{opacity:1;pointer-events:auto}
+#drawer header{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.4rem;border-bottom:1px solid var(--line)}
+#cartItems{flex:1;overflow:auto;padding:1rem 1.4rem}
+.ci{display:grid;grid-template-columns:1fr auto auto;gap:.8rem;align-items:center;padding:.8rem 0;border-bottom:1px dashed var(--line)}
+.q{display:flex;align-items:center;gap:.5rem}.q button{width:30px;height:30px;border-radius:50%;border:1px solid var(--ac)}
+#drawer footer{padding:1.2rem 1.4rem;border-top:1px solid var(--line)}
+.tot{display:flex;justify-content:space-between;font-size:1.25rem;margin-bottom:1rem}
+#send{width:100%;padding:.95rem;background:var(--ac);color:#fff;border-radius:var(--r);font-weight:700}
+.empty{text-align:center;color:#8a7d6b;padding:2.5rem 0}
+:focus-visible{outline:2px solid var(--ac2);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+html,body{overflow-x:hidden;max-width:100%}img{height:auto}</style>
+<title>مطعم الزعفران | تجربة طعام ملكية</title><meta name="description" content="مطعم الزعفران: مشويات وأطباق عالمية، حجز طاولات وتوصيل سريع."><meta name="theme-color" content="#0E4D3C">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F9F7;--ink:#2A1B3D;--ac:#E4572E;--ac2:#2E8B7A;--line:#DCE7E2;--soft:#FFE3D6;--r:16px;--bf:'IBM Plex Sans Arabic',sans-serif;--df:'Lalezar',cursive}
-h1,h2,h3,.logo{font-family:var(--df);font-weight:400;line-height:1.3}
-.bar{position:fixed;top:14px;inset-inline:14px;z-index:30;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-radius:22px;padding:.6rem 1.2rem;box-shadow:0 10px 30px -12px rgba(42,27,61,.25);max-width:1180px;margin-inline:auto}
-.logo{font-size:1.8rem;color:var(--ac)}.links{display:flex;gap:1.5rem;font-weight:500}.links a:hover{color:var(--ac)}
-#cartBtn{background:var(--ink);color:#fff;padding:.5rem 1.1rem;border-radius:14px}#cartCount{background:var(--ac);border-radius:50%;padding:0 .5rem;margin-inline-start:.4rem}
-.hero{margin:14px;border-radius:36px;min-height:88vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:2rem}
-.hero .ph{position:absolute;inset:0;font-size:8rem}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(255,245,238,.9),rgba(255,245,238,0) 55%)}
-.hero .in{position:relative;z-index:2;max-width:640px;margin:0 auto 1rem 0}.hero h1{font-size:clamp(3rem,8vw,6rem);color:var(--ink)}.hero p{font-size:1.15rem;margin:.5rem 0 1.5rem}
-.btn{display:inline-block;padding:.9rem 2rem;border-radius:var(--r);background:var(--ac);color:#fff;font-weight:600}.btn.o{background:#fff;color:var(--ink);margin-inline-start:.5rem}
-section{padding:5rem 0}h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:1rem}
-#tabs button{padding:.6rem 1.3rem;border-radius:var(--r);background:#fff;border:1px solid var(--line);font-weight:500}#tabs .on{background:var(--ink);color:#fff}
-#menu{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.4rem;margin-top:1.5rem}
-.card{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 12px 34px -20px rgba(42,27,61,.4);transition:.3s}.card:hover{transform:translateY(-4px)}
-.card .ph{height:210px}.tx{padding:1.1rem 1.2rem 1.3rem}.card h3{font-size:1.5rem}.card p{font-size:.92rem;color:#6a5f78;min-height:3.2em}
-.row{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem}.row b{color:var(--ac2);font-size:1.15rem}.add{background:var(--soft);color:var(--ac);padding:.45rem 1rem;border-radius:12px;font-weight:600}.add:hover{background:var(--ac);color:#fff}
-.sv{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}.sv div{border-radius:28px;padding:2rem;min-height:190px}.sv div:nth-child(1){background:#FFE3D6}.sv div:nth-child(2){background:#D5EEE6}.sv div:nth-child(3){background:#E9DFF7}.sv div:nth-child(4){background:#FFF1BF}
-.sv i{font-size:2.4rem;font-style:normal}.sv h3{font-size:1.6rem}
-footer.f{margin:14px;border-radius:36px;background:var(--ink);color:#F6F9F7;padding:3.5rem 2rem;text-align:center}footer.f h2{color:#FFB59E}.alt{display:inline-block;margin-top:1rem;color:#FFB59E}
-@media(max-width:820px){.links{display:none}.hero{min-height:80vh;padding:1.2rem}.hero .in{margin:0}.card .ph{height:190px}}
+:root{--bg:#FBF5E8;--ink:#2B2118;--ac:#0E4D3C;--ac2:#B98A3E;--line:#E6D9BD;--soft:#EFE2C4;--r:999px;--bf:'Tajawal',sans-serif;--df:'Aref Ruqaa',serif}
+h1,h2,h3,.logo{font-family:var(--df);font-weight:700;line-height:1.35}
+nav.top{position:sticky;top:0;z-index:30;background:rgba(251,245,232,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-size:1.7rem;color:var(--ac)}.links{display:flex;gap:1.6rem}.links a:hover{color:var(--ac2)}
+#cartBtn{background:var(--ac);color:#fff;padding:.5rem 1.2rem;border-radius:var(--r)}#cartCount{background:var(--ac2);border-radius:50%;padding:0 .5rem;margin-inline-start:.4rem}
+.hero{background:linear-gradient(160deg,#FBF5E8,#F1E3C2);padding:4rem 0 5rem}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);color:var(--ac)}.hero p{font-size:1.2rem;max-width:34rem;margin:1rem 0 2rem}
+.btn{display:inline-block;padding:.9rem 2.2rem;border-radius:var(--r);background:var(--ac);color:#fff;font-weight:700}.btn.o{background:none;border:1.5px solid var(--ac2);color:var(--ac);margin-inline-start:.6rem}
+.arch{border-radius:999px 999px 24px 24px;height:min(560px,70vw);border:6px solid var(--ac2);width:100%;font-size:6rem}
+section{padding:5rem 0}h2{font-size:clamp(2rem,4vw,3rem);color:var(--ac);text-align:center;margin-bottom:.5rem}.sub{text-align:center;margin-bottom:2rem;color:#6b5b45}
+#tabs{justify-content:center}#tabs button{padding:.55rem 1.4rem;border:1px solid var(--ac2);border-radius:var(--r)}#tabs .on{background:var(--ac);color:#fff;border-color:var(--ac)}
+#menu{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr));gap:1.4rem;margin-top:2rem}
+.card{display:flex;gap:1.2rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:1rem;transition:.3s}.card:hover{box-shadow:0 18px 40px -18px rgba(14,77,60,.35)}
+.card .ph{flex:0 0 130px;height:130px;border-radius:50%;border:3px solid var(--ac2)}.tx{flex:1}.card h3{font-size:1.4rem;color:var(--ac)}.card p{font-size:.95rem;color:#6b5b45}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:.5rem}.row b{color:var(--ac2);font-size:1.15rem}.add{background:var(--ac);color:#fff;padding:.4rem 1rem;border-radius:var(--r);font-size:.9rem}
+.band{background:var(--ac);color:#FBF5E8}.band h2{color:#E8C77A}.band .sub{color:#d9e6df}
+.sv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}.sv div{border:1px solid rgba(232,199,122,.5);border-radius:24px;padding:2rem 1.4rem;text-align:center}.sv i{font-size:2.4rem;font-style:normal}.sv h3{color:#E8C77A;margin:.4rem 0}
+footer.f{padding:3rem 0;text-align:center;background:var(--soft)}footer.f p{margin:.3rem 0}.alt{display:inline-block;margin-top:1rem;color:var(--ac);border-bottom:1px solid var(--ac2)}
+@media(max-width:820px){.links{display:none}.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.arch{order:-1;height:340px}.card{flex-direction:column;text-align:center}.card .ph{flex-basis:auto;width:140px}.row{gap:1rem}}
 </style></head><body>
-<nav class="bar"><a class="logo" href="#">روزا</a><div class="links"><a href="#menu-s">القائمة</a><a href="#services">الخدمات</a><a href="#contact">تواصل</a></div><button id="cartBtn">🛒 السلة<span id="cartCount">٠</span></button></nav>
-<header class="hero"><div class="ph" data-e="🍕"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=75" alt="أطباق روزا" onerror="this.remove()"></div><div class="in"><h1>طعام بيفرّح القلب</h1><p>مطبخ عصري بنكهات عالمية في أجواء مشرقة. اطلب بضغطة، واستلم أينما كنت.</p><a class="btn" href="#menu-s">اطلب الآن</a><a class="btn o" href="#services">خدماتنا</a></div></header>
-<section id="menu-s"><div class="wrap"><h2>اختر من قائمتنا</h2><div id="tabs"></div><div id="menu"></div></div></section>
-<section id="services"><div class="wrap"><h2>خدمات تسهّل يومك</h2><div class="sv"><div><i>🛵</i><h3>توصيل لحد بابك</h3><p>تتبّع طلبك وهو في الطريق</p></div><div><i>📅</i><h3>حجز أونلاين</h3><p>احجز طاولتك في ثوانٍ</p></div><div><i>🎂</i><h3>حفلات ومناسبات</h3><p>قوائم مخصصة وتجهيز كامل</p></div><div><i>🏢</i><h3>وجبات الشركات</h3><p>اشتراكات أسبوعية لفريقك</p></div></div></div></section>
-<footer class="f" id="contact"><h2>نستناك في روزا</h2><p>الإسكندرية · يوميًا من ١١ صباحًا حتى ١ بعد منتصف الليل</p><p>📞 0100 000 0000</p><a class="alt" href="index.html">شاهد التصميم الأول</a></footer>
-<div id="ov"></div><aside id="drawer" aria-label="سلة الطلبات"><header><h2>سلة طلباتك</h2><button id="close" aria-label="إغلاق">✕</button></header><div id="cartItems"></div><footer><div class="tot"><span>الإجمالي</span><b id="cartTotal"></b></div><button id="send">أرسل الطلب عبر واتساب</button></footer></aside><script src="assets/app.js"></script></body></html>
+<nav class="top"><div class="wrap"><a class="logo" href="#">الزعفران</a><div class="links"><a href="#menu-s">القائمة</a><a href="#services">خدماتنا</a><a href="#contact">احجز طاولة</a></div><button id="cartBtn">🛒 السلة<span id="cartCount">٠</span></button></div></nav>
+<header class="hero"><div class="wrap"><div><h1>مائدة تليق بضيوفك</h1><p>نار الفحم، زعفران أصيل، وخدمة تُشعرك أنك الضيف الوحيد. اطلب الآن أو احجز طاولتك لأمسية لا تُنسى.</p><a class="btn" href="#menu-s">استعرض القائمة</a><a class="btn o" href="#contact">احجز طاولة</a></div>
+<div class="ph arch" data-e="🍽️"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=75" alt="طبق فاخر" onerror="this.remove()"></div></div></header>
+<section id="menu-s"><div class="wrap"><h2>قائمة الطعام</h2><p class="sub">أصناف يعدّها الشيف يوميًا من أجود الخامات</p><div id="tabs"></div><div id="menu"></div></div></section>
+<section class="band" id="services"><div class="wrap"><h2>خدمات تكتمل بها التجربة</h2><p class="sub">كل ما تحتاجه في مكان واحد</p><div class="sv"><div><i>🛵</i><h3>توصيل سريع</h3><p>يصلك ساخنًا خلال ٤٥ دقيقة</p></div><div><i>🪑</i><h3>حجز طاولات</h3><p>جلسات عائلية وركن خاص</p></div><div><i>🎉</i><h3>مناسبات وكاترينج</h3><p>أعياد ميلاد وحفلات وشركات</p></div><div><i>🥂</i><h3>غرف VIP</h3><p>خصوصية تامة لاجتماعاتك</p></div></div></div></section>
+<footer class="f" id="contact"><div class="wrap"><h2>احجز طاولتك</h2><p>الإسكندرية، الكورنيش · يوميًا من ١٢ ظهرًا حتى ٢ صباحًا</p><p>📞 0100 000 0000</p></div></footer>
+<div id="ov"></div><aside id="drawer" aria-label="سلة الطلبات"><header><h2>سلة طلباتك</h2><button id="close" aria-label="إغلاق">✕</button></header><div id="cartItems"></div><footer><div class="tot"><span>الإجمالي</span><b id="cartTotal"></b></div><button id="send">أرسل الطلب عبر واتساب</button></footer></aside><script>// ⚙️ عدّل رقم الواتساب (بدون +) واسم المطعم
+const WA='201000000000',NAME='مطعم الزعفران';
+const CATS=['مقبلات','أطباق رئيسية','مشويات','حلويات','مشروبات'];
+const U=i=>`https://images.unsplash.com/photo-${i}?auto=format&fit=crop&w=700&q=70`;
+// [id, قسم, الاسم, الوصف, السعر, صورة, إيموجي بديل]
+const ITEMS=[
+[1,0,'سلطة الحدائق الملكية','خضار موسمية، جبنة جوات، رمان وصوص عسل بلسميك',95,'1546069901-ba9599a7e63c','🥗'],
+[2,0,'توست البيض الفاخر','بريوش محمّص، أفوكادو، بيض مسلوق وزعتر بري',110,'1482049016688-2d3e1b311543','🍳'],
+[3,1,'ستيك ريب آي','300 جم لحم مُعتّق على الفحم مع بطاطس الأعشاب',620,'1544025162-d76694265947','🥩'],
+[4,1,'سلمون بالزبدة والليمون','فيليه سلمون طازج مع خضار مشوية وصوص الكابريز',480,'1519708227418-c8fd9a32b7a2','🐟'],
+[5,1,'بيتزا الفرن الحجري','عجينة مخمّرة ٤٨ ساعة، موتزاريلا وريحان طازج',260,'1565299624946-b28f40a0ae38','🍕'],
+[6,2,'مشاوي الزعفران المشكلة','كباب وكفتة وريش على الفحم مع أرز بالشعيرية',540,'1555939594-58d7cb561ad1','🍢'],
+[7,2,'طبق اليوم الخاص','اختيار الشيف من أطيب مشاوي اليوم مع الصوصات',390,'1414235077428-338989a2e8c0','🍽️'],
+[8,3,'كيك الشوكولاتة البلجيكية','طبقات غنية بشوكولاتة داكنة وكريمة فانيليا',150,'1578985545062-69928b1d9587','🍰'],
+[9,3,'بان كيك العسل والتوت','ثلاث طبقات دافئة مع توت طازج وعسل سدر',130,'1567620905732-2d1ec7ab7445','🥞'],
+[10,4,'قهوة الزعفران المحوّجة','قهوة مختصة بالهيل والزعفران',70,'1495474472287-4d71bcdd2085','☕']
+];
+const $=s=>document.querySelector(s),fmt=n=>n.toLocaleString('ar-EG')+' ج.م';
+let cat=0,cart={};try{cart=JSON.parse(localStorage.getItem('cart')||'{}')}catch(e){}
+const find=id=>ITEMS.find(x=>x[0]==id);
+function tabs(){$('#tabs').innerHTML=CATS.map((c,i)=>`<button class="${i==cat?'on':''}" data-c="${i}">${c}</button>`).join('')}
+function menu(){$('#menu').innerHTML=ITEMS.filter(x=>x[1]==cat).map(x=>`<article class="card"><div class="ph" data-e="${x[6]}"><img loading="lazy" src="${U(x[5])}" alt="${x[2]}" onerror="this.remove()"></div><div class="tx"><h3>${x[2]}</h3><p>${x[3]}</p><div class="row"><b>${fmt(x[4])}</b><button class="add" data-id="${x[0]}">أضف للسلة</button></div></div></article>`).join('')}
+function draw(){const ids=Object.keys(cart).filter(k=>cart[k]>0);let t=0,n=0;
+$('#cartItems').innerHTML=ids.length?ids.map(k=>{const x=find(k),q=cart[k];t+=x[4]*q;n+=q;return`<div class="ci"><span>${x[2]}</span><div class="q"><button data-m="${k}" aria-label="إنقاص">−</button><i>${q}</i><button data-p="${k}" aria-label="زيادة">+</button></div><b>${fmt(x[4]*q)}</b></div>`}).join(''):'<p class="empty">سلتك فاضية — اختار من القائمة 🍽️</p>';
+$('#cartTotal').textContent=fmt(t);$('#cartCount').textContent=n.toLocaleString('ar-EG');$('#send').disabled=!n;
+try{localStorage.setItem('cart',JSON.stringify(cart))}catch(e){}}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b){if(e.target.id=='ov')document.body.classList.remove('open');return}
+const d=b.dataset;if(d.c!==undefined){cat=+d.c;tabs();menu()}
+if(d.id){cart[d.id]=(cart[d.id]||0)+1;draw();b.textContent='✓ تمت الإضافة';setTimeout(()=>b.textContent='أضف للسلة',900)}
+if(d.p){cart[d.p]++;draw()}if(d.m){cart[d.m]--;draw()}
+if(b.id=='cartBtn')document.body.classList.add('open');if(b.id=='close')document.body.classList.remove('open');
+if(b.id=='send'){const l=Object.keys(cart).filter(k=>cart[k]>0).map(k=>`• ${find(k)[2]} × ${cart[k]}`).join('\n');
+open(`https://wa.me/${WA}?text=${encodeURIComponent(`طلب جديد من ${NAME}\n${l}\nالإجمالي: ${$('#cartTotal').textContent}`)}`,'_blank')}});
+tabs();menu();draw();
+</script></body></html>
